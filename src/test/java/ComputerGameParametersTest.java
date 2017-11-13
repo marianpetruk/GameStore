@@ -79,7 +79,7 @@ public class ComputerGameParametersTest {
 
         System.out.println(CSGOParameters.getPrice());
 
-        assertEquals(266.48, CSGOParameters.getPrice(),1e-15);
+        assertEquals(266.48, CSGOParameters.getPrice(), 1e-15);
 
     }
 

@@ -1,6 +1,5 @@
 ComputerGame.class
-Main.class
+ComputerStore.class
 Platform.class
-Store.class
 Genre.class
 ComputerGameParameters.class

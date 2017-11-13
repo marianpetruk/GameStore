@@ -28,7 +28,7 @@ public class ComputerGameParameters {
                 || (!(this.getPlatforms().containsAll(otherParameters.getPlatforms())
                 && otherParameters.getPlatforms().containsAll(this.getPlatforms())))) {
             return false;
-                }
+        }
         return true;
     }
 
