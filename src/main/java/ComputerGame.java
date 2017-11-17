@@ -6,6 +6,10 @@ public class ComputerGame {
         this.gameParameters = parameters;
     }
 
+    public ComputerGame() {
+
+    }
+
     public ComputerGameParameters getSpecifications() {
         return gameParameters;
     }
@@ -21,6 +25,4 @@ public class ComputerGame {
                 ", platforms=" + this.getSpecifications().getPlatforms() +
                 '}';
     }
-
-
 }

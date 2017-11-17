@@ -5,9 +5,6 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class ComputerGameParametersTest {
-    @Test
-    public void filter() throws Exception {
-    }
 
     @Test
     public void getDescription() throws Exception {
