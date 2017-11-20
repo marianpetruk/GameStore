@@ -1,42 +1,64 @@
 //import java.util.ArrayList;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    private List<ComputerGame> games;
+    List<ComputerGame> games;
 
-//    private ArrayList<ComputerGame> games;
+    //    private ArrayList<ComputerGame> games;
     private PaymentStrategy paymentStrategy;
-    private Delivery deliveryStrategy;
+    private DeliveryStrategy deliveryStrategy;
+
+
+    Cart() {
+        this.games = new ArrayList<>();
+    }
+
+
+    public Cart setPaymentStrategy(PaymentStrategy paymentStrategy) {
+        this.paymentStrategy = paymentStrategy;
+        return this;
+    }
+
+    public Cart setDelieveryStrategy(DeliveryStrategy delieveryStrategy) {
+        this.deliveryStrategy = delieveryStrategy;
+        return this;
+    }
+
+    public double computeTotalPrice() {
+        double total_price = 0.0;
+        for (int i = 0; i < this.games.size(); i++) {
+            total_price += this.games.get(i).getPrice();
+        }
+        return total_price;
+    }
+
+    public boolean ship() {
+//        this.ship();
+        return true;
+    }
+
+    public Cart addGame(ComputerGame game) {
+//        this.addGame(game);
+//        return this;
+        this.games.add(game);
+
+        return this;
+
+    }
+
+    public List<ComputerGame> getComputerGames() {
+        return this.games;
+    }
 
     public PaymentStrategy getPaymentStrategy() {
         return paymentStrategy;
     }
 
-    public void setPaymentStrategy(PaymentStrategy paymentStrategy) {
-        this.paymentStrategy = paymentStrategy;
-    }
-
-    public Delivery getDelieveryStrategy() {
+    public DeliveryStrategy getDeliveryStrategy() {
         return deliveryStrategy;
     }
 
-    public void setDelieveryStrategy(Delivery delieveryStrategy) {
-        this.deliveryStrategy = delieveryStrategy;
-    }
-
-
-    public double computeTotalPrice() {
-        return 100.500;
-    }
-
-    public void ship() {
-        if (paymentStrategy.pay(computeTotalPrice())) {
-            deliveryStrategy.deliver(games);
-        }
-    }
-
-    public void addGame(ComputerGame game){
-        games.add(game);
-    }
 
 }

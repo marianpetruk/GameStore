@@ -25,4 +25,9 @@ public class ComputerGame {
                 ", platforms=" + this.getSpecifications().getPlatforms() +
                 '}';
     }
+
+
+    public double getPrice() {
+        return this.getSpecifications().getPrice();
+    }
 }
