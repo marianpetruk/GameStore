@@ -32,18 +32,18 @@ public class CartTest {
         cart3.addGame(csgo);
 
 
-        assert(cart3.computeTotalPrice() == 266.48 * 0.5);
+        assert (cart3.computeTotalPrice() == 266.48 * 0.5);
     }
 
     @Test
     public void ship() throws Exception {
-        assert(cart1.ship() == true);
-        assert(cart2.ship() == true);
+        assert (cart1.ship() == true);
+        assert (cart2.ship() == true);
     }
 
     @Test
     public void addGame() throws Exception {
-        assert(cart1 == cart2);
+        assert (cart1 == cart2);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class CartTest {
 
         cart3.addGame(csgo);
 
-        assert(cart3.getComputerGames().size() == 1);
+        assert (cart3.getComputerGames().size() == 1);
 
     }
 
@@ -90,7 +90,7 @@ public class CartTest {
 
         cart3.addGame(csgo);
 
-        assert(cart3.getPaymentStrategy().getClass().getName() == "PayPalPayment");
+        assert (cart3.getPaymentStrategy().getClass().getName() == "PayPalPayment");
     }
 
     @Test
@@ -114,7 +114,7 @@ public class CartTest {
 
         cart3.addGame(csgo);
 
-        assert(cart3.getDeliveryStrategy().getClass().getName() == "DeliveryDHL");
+        assert (cart3.getDeliveryStrategy().getClass().getName() == "DeliveryDHL");
 
     }
 

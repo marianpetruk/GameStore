@@ -1,12 +1,9 @@
-//import java.util.ArrayList;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
     List<ComputerGame> games;
 
-    //    private ArrayList<ComputerGame> games;
     private PaymentStrategy paymentStrategy;
     private DeliveryStrategy deliveryStrategy;
 
@@ -35,17 +32,12 @@ public class Cart {
     }
 
     public boolean ship() {
-//        this.ship();
         return true;
     }
 
     public Cart addGame(ComputerGame game) {
-//        this.addGame(game);
-//        return this;
         this.games.add(game);
-
         return this;
-
     }
 
     public List<ComputerGame> getComputerGames() {

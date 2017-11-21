@@ -7,10 +7,6 @@ public class CartDecorator extends Cart {
         this.cartToDecorate = cart;
     }
 
-//    public PaymentStrategy getPaymentStrategy() {
-//        return paymentStrategy;
-//    }
-
     @Override
     public Cart setPaymentStrategy(PaymentStrategy paymentStrategy) {
         this.cartToDecorate.setPaymentStrategy(paymentStrategy);
