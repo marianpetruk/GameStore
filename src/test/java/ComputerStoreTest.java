@@ -24,5 +24,10 @@ public class ComputerStoreTest {
 //        assertTrue(GameStore.getNumberOfGameAvailable() == 1);
         assertEquals("NumberOfGames", 1, GameStore.getNumberOfGameAvailable());
         assertEquals("GameName", "CS:GO", GameStore.getComputerGames().get(0).getSpecifications().getName());
+        assertTrue(GameStore.addGame(CSGO));
+        assertTrue(GameStore.removeGame(CSGO));
     }
+
+
+
 }

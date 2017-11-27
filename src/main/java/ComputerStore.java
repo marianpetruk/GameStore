@@ -8,10 +8,11 @@ public class ComputerStore {
         computerGames = new ArrayList<ComputerGame>();
     }
 
-    public void addGame(ComputerGame computerGame) {
+    public boolean addGame(ComputerGame computerGame) {
         gamesIdCounter++;
         computerGame.getSpecifications().setGameId(gamesIdCounter);
         this.computerGames.add(computerGame);
+        return true;
     }
 
     public ArrayList<ComputerGame> search(ComputerGameParameters searchParameters) {
@@ -32,11 +33,12 @@ public class ComputerStore {
         return this.computerGames.size();
     }
 
-    public void removeGame(ComputerGame computerGame) {
+    public boolean removeGame(ComputerGame computerGame) {
         for (int i = 0; i < this.getNumberOfGameAvailable(); i++) {
             if (this.computerGames.get(i) == computerGame)
                 this.computerGames.remove(i);
         }
+        return true;
     }
 
 
