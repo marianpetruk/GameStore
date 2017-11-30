@@ -1,6 +1,6 @@
-public class User implements Observer{
+public class User implements Observer {
 
-    public User(){
+    public User() {
 
     }
 

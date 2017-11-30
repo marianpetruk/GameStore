@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
+        /*
         ArrayList<Genre> CSGOGenres = new ArrayList<Genre>();
         CSGOGenres.add(Genre.ACTION);
         ArrayList<Platform> CSGOPlatforms = new ArrayList<Platform>();
@@ -22,6 +23,6 @@ public class Main {
 
         cart.getPaymentStrategy().pay(cart.computeTotalPrice());
         cart.getDeliveryStrategy().deliver(cart.getComputerGames());
-
+        */
     }
 }

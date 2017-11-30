@@ -6,6 +6,33 @@ import static org.junit.Assert.*;
 
 public class ComputerGameParametersTest {
 
+
+
+    @Test
+    public void filterTest() throws Exception{
+        ArrayList<Genre> CSGOGenres = new ArrayList<Genre>();
+        CSGOGenres.add(Genre.ACTION);
+        ArrayList<Platform> CSGOPlatforms = new ArrayList<Platform>();
+        CSGOPlatforms.add(Platform.Linux);
+        CSGOPlatforms.add(Platform.Windows);
+        CSGOPlatforms.add(Platform.MAC);
+        ComputerGameParameters CSGOParameters = new ComputerGameParameters("CS:GO", "is a multiplayer first-person shooter video game developed by Hidden Path Entertainment and Valve Corporation.", 266.48,
+                17, CSGOGenres, CSGOPlatforms, 1);
+
+
+        ArrayList<Genre> CSGOGenresOther = new ArrayList<Genre>();
+        CSGOGenres.add(Genre.ACTION);
+        ArrayList<Platform> CSGOPlatformsOther = new ArrayList<Platform>();
+        CSGOPlatforms.add(Platform.Linux);
+        CSGOPlatforms.add(Platform.Windows);
+        CSGOPlatforms.add(Platform.MAC);
+        ComputerGameParameters CSGOParametersOther = new ComputerGameParameters("CS:GO", "is a multiplayer first-person shooter video game developed by Hidden Path Entertainment and Valve Corporation.", 266.48,
+                19, CSGOGenres, CSGOPlatforms, 1);
+
+
+        assertFalse(CSGOParameters.filter(CSGOParametersOther));
+    }
+
     @Test
     public void getDescription() throws Exception {
         ArrayList<Genre> CSGOGenres = new ArrayList<Genre>();

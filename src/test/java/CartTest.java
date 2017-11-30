@@ -56,7 +56,7 @@ public class CartTest {
                 17, CSGOGenres, CSGOPlatforms, 1);
         ComputerGame csgo = new ComputerGame(CSGOParameters);
 
-        assertTrue( cs.addGame(csgo));
+        assertTrue(cs.addGame(csgo));
     }
 
     @Test
@@ -84,7 +84,7 @@ public class CartTest {
         cartTest.addGame(csgo);
 
         assert (cart3.getComputerGames().size() == 1);
-        assert(Objects.equals(cart3.getComputerGames(), cartTest.getComputerGames()));
+        assert (Objects.equals(cart3.getComputerGames(), cartTest.getComputerGames()));
 
     }
 
