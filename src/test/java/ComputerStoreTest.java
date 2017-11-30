@@ -7,7 +7,7 @@ import static junit.framework.TestCase.assertEquals;
 
 public class ComputerStoreTest {
     @Test
-    public void ComputerStoreTest() {
+    public void ComputerStoreClassTest() {
         ComputerStore GameStore = new ComputerStore();
         ArrayList<Genre> CSGOGenres = new ArrayList<Genre>();
         CSGOGenres.add(Genre.ACTION);
@@ -26,6 +26,7 @@ public class ComputerStoreTest {
         assertEquals("GameName", "CS:GO", GameStore.getComputerGames().get(0).getSpecifications().getName());
         assertTrue(GameStore.addGame(CSGO));
         assertTrue(GameStore.removeGame(CSGO));
+        assertEquals(GameStore.search(CSGOParameters).get(0).getSpecifications().getName(), "CS:GO");
     }
 
 
