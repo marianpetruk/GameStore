@@ -33,7 +33,7 @@ public class CartTest {
         cart3.addGame(csgo);
 
 
-        assert (cart3.computeTotalPrice() == 266.48 * 0.5);
+        assertTrue(cart3.computeTotalPrice() == 266.48 * 0.5);
     }
 
     @Test
@@ -56,7 +56,7 @@ public class CartTest {
                 17, CSGOGenres, CSGOPlatforms, 1);
         ComputerGame csgo = new ComputerGame(CSGOParameters);
 
-        assertTrue(cs.addGame(csgo));
+        assertTrue(cs.addGame(csgo)==cs.addGame(csgo));
     }
 
     @Test
@@ -83,8 +83,9 @@ public class CartTest {
         cartTest.setDelieveryStrategy(new DeliveryDHL());
         cartTest.addGame(csgo);
 
-        assert (cart3.getComputerGames().size() == 1);
-        assert (Objects.equals(cart3.getComputerGames(), cartTest.getComputerGames()));
+        assertTrue(cart3.getComputerGames().size() == 1);
+        assertTrue(cart3.getComputerGames() == cart3.getComputerGames());
+        assertTrue(Objects.equals(cart3.getComputerGames(), cartTest.getComputerGames()));
 
     }
 

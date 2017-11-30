@@ -21,13 +21,12 @@ public class ComputerGameParametersTest {
 
 
         ArrayList<Genre> CSGOGenresOther = new ArrayList<Genre>();
-        CSGOGenres.add(Genre.ACTION);
+        CSGOGenres.add(Genre.MOBA);
         ArrayList<Platform> CSGOPlatformsOther = new ArrayList<Platform>();
         CSGOPlatforms.add(Platform.Linux);
-        CSGOPlatforms.add(Platform.Windows);
         CSGOPlatforms.add(Platform.MAC);
-        ComputerGameParameters CSGOParametersOther = new ComputerGameParameters("CS:GO", "is a multiplayer first-person shooter video game developed by Hidden Path Entertainment and Valve Corporation.", 266.48,
-                19, CSGOGenres, CSGOPlatforms, 1);
+        ComputerGameParameters CSGOParametersOther = new ComputerGameParameters("CS:GO_imaginary", "is not a multiplayer first-person shooter video game developed by Hidden Path Entertainment and Valve Corporation.", 1000,
+                19, CSGOGenres, CSGOPlatforms, 2);
 
 
         assertFalse(CSGOParameters.filter(CSGOParametersOther));
