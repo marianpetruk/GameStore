@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ComputerStore {
     private static int gamesIdCounter = 0;
@@ -35,7 +36,7 @@ public class ComputerStore {
 
     public boolean removeGame(ComputerGame computerGame) {
         for (int i = 0; i < this.getNumberOfGameAvailable(); i++) {
-            if (this.computerGames.get(i) == computerGame)
+            if (Objects.equals(this.computerGames.get(i), computerGame))
                 this.computerGames.remove(i);
         }
         return true;
